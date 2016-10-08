@@ -1,0 +1,27 @@
+{
+  "name": "vb-wizard",
+  "description": "AngularJS Wizard Component",
+  "main": "dist/vb-wizard.js",
+  "authors": [
+    "Vytautas Barkauskas"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs",
+    "wizard"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8"
+  }
+}
