@@ -1,0 +1,19 @@
+<div class="wizard-bar" layout="row">
+	<div class="wizard-step" flex ng-repeat="step in steps" layout="column" layout-align="start center" ng-class="getClass($index)">
+		<div class="ball-bar-container" layout="row">
+			<div class="ball-bar" flex></div>
+			<div class="ball-bar" flex></div>
+		</div>
+		<button class="ball" ng-click="internalClick($index)">
+			<div class="step-checkmark">
+				<i class="fa fa-check"></i>
+			</div>
+			<div class="step-index">
+				{{$index+1}}
+			</div>
+		</button>
+		<div class="step-text">
+			<a href ng-click="internalClick($index)">{{step}}</a>
+		</div>
+	</div>
+</div>

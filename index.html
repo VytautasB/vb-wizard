@@ -2,11 +2,34 @@
 <html ng-app="vb-wizard">
 <head>
 	<title>Demo</title>
+	<link rel="stylesheet" type="text/css" href="vb-wizard.css">
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 	<script type="text/javascript" src="vb-wizard.module.js"></script>
 	<script type="text/javascript" src="vb-wizard.directive.js"></script>
+	<script type="text/javascript">
+		angular.module('vb-wizard').controller('Demo', function($scope) {
+			$scope.steps = [
+				'Select an objective',
+				'Choose media',
+				'Draw AOIs',
+				'Review your experiment',
+				'Launch!'
+			];
+			
+			$scope.current = 2;
+
+			$scope.stepClick = function(index) {
+				$scope.current = index;
+			}
+
+			$scope.stepDisabled = function(index) {
+				return index > 3;
+			}
+
+		});
+	</script>
 </head>
-<body>
-	<vb-wizard></vb-wizard>
+<body ng-controller="Demo">
+	<div vb-wizard-bar steps="steps" current="current" step-click="stepClick" step-disabled="stepDisabled"></div>
 </body>
 </html>

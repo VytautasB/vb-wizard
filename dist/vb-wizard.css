@@ -1,0 +1,147 @@
+/* Styles go here */
+
+[vb-wizard-bar] [layout] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+[vb-wizard-bar] [layout="row"] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+[vb-wizard-bar] [layout="column"] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+[vb-wizard-bar] [flex] {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.noselect, .wizard-bar {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wizard-step {
+  text-align: center;
+  position: relative;
+  
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wizard-step a {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wizard-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+.wizard-bar .ball {
+  border: 3px solid #cddc39;
+  width: 40px;
+  height: 40px;
+  line-height: 34px;
+  text-align: center;
+  font-weight: bold;
+  color: #cddc39;
+  font-size: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: -20px;
+  padding: 0px;
+  background-color: #fff;
+}
+
+.wizard-bar [disabled].ball {
+  border: 3px solid #ddd;
+  color: #ddd
+}
+
+.wizard-bar .ball:focus {
+  outline: 0;
+}
+
+.ball-bar-container {
+  width: 100%;
+}
+
+.wizard-step:first-child .ball-bar:first-child,
+.wizard-step:last-child .ball-bar:last-child{
+  visibility: hidden;
+}
+
+.ball-bar:first-child {
+  background-color: #ddd;
+  height: 4px;
+  margin-right: 30px;
+}
+
+.ball-bar:last-child {
+  background-color: #ddd;
+  height: 4px;
+  margin-left: 30px;
+}
+
+.step-done .ball-bar:first-child {
+  background-color: #cddc39;
+  height: 4px;
+  margin-right: 30px;
+}
+
+.step-done .ball-bar:last-child {
+  background-color: #cddc39;
+  height: 4px;
+  margin-left: 30px;
+}
+
+.step-current .ball-bar:first-child {
+  background-color: #cddc39;
+  height: 4px;
+  margin-right: 30px;
+}
+
+
+.wizard-bar .ball .step-checkmark {
+  display: none;
+}
+
+.wizard-bar .step-done .ball {
+  border: 3px solid #cddc39;
+  background-color: #cddc39;
+  color: #fff;
+}
+
+.wizard-bar .step-done .ball .step-number {
+  display: none;
+}
+
+.wizard-bar .step-done .ball .step-checkmark {
+  display: block;
+}
+
+.wizard-bar .step-current .ball {
+  border: 3px solid #cddc39;
+  background-color: #cddc39;
+  color: #fff;
+}
+
+.step-text {
+  margin-top: 5px;
+}
