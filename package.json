@@ -8,6 +8,10 @@
   },
   "author": "Vytautas Barkauskas",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+     "url" : "https://github.com/VytautasB/vb-wizard.git"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
