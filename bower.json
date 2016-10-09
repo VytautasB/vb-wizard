@@ -1,7 +1,10 @@
 {
   "name": "vb-wizard",
   "description": "AngularJS Wizard Component",
-  "main": "dist/vb-wizard.js",
+  "main": [
+    "dist/vb-wizard.js",
+    "dist/vb-wizard.css"
+  ],
   "authors": [
     "Vytautas Barkauskas"
   ],
