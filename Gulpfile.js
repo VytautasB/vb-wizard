@@ -7,10 +7,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var minifyHtml = require('gulp-minify-html');
 var ngTemplate = require('gulp-ng-template');
 var clean = require('gulp-clean');
+var sass = require('gulp-sass');
 
 gulp.task('connect', function() {
 	connect.server({
-		root: ['src', '.'],
+		root: ['dist', '.'],
 		livereload: true
 	});
 });
@@ -27,6 +28,7 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['./src/**/*.js'], ['js']);
+  gulp.watch(['./src/**/*.scss'], ['sass']);
 });
 
 gulp.task('clean', function (cb) {
@@ -34,6 +36,13 @@ gulp.task('clean', function (cb) {
 		.pipe(clean())
 		.on('end', cb);
 });
+
+gulp.task('sass', function () {
+  return gulp.src('./src/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./dist'));
+});
+
 
 gulp.task('build:templates', function(cb) {
   gulp.src('src/**/*.html')

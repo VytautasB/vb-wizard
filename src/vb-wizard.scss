@@ -1,30 +1,32 @@
 /* Styles go here */
 
-[vb-wizard-bar] [layout] {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+[vb-wizard-bar], vb-wizard-bar {
+  [layout] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  [layout="row"] {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  [layout="column"] {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  [flex] {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
 }
 
-[vb-wizard-bar] [layout="row"] {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-[vb-wizard-bar] [layout="column"] {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-[vb-wizard-bar] [flex] {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.noselect, .wizard-bar {
+.noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -40,43 +42,49 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+
+  a {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
-.wizard-step a {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+.wizard-bar {
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .ball {
+    border: 3px solid #cddc39;
+    width: 40px;
+    height: 40px;
+    line-height: 34px;
+    text-align: center;
+    font-weight: bold;
+    color: #cddc39;
+    font-size: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: -20px;
+    padding: 0px;
+    background-color: #fff;
+  }
+
+  [disabled].ball {
+    border: 3px solid #ddd;
+    color: #ddd
+  }
+
+  .ball:focus {
+    outline: 0;
+  }
+
 }
 
-.wizard-bar a {
-  text-decoration: none;
-  color: black;
-}
 
-.wizard-bar .ball {
-  border: 3px solid #cddc39;
-  width: 40px;
-  height: 40px;
-  line-height: 34px;
-  text-align: center;
-  font-weight: bold;
-  color: #cddc39;
-  font-size: 20px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: -20px;
-  padding: 0px;
-  background-color: #fff;
-}
-
-.wizard-bar [disabled].ball {
-  border: 3px solid #ddd;
-  color: #ddd
-}
-
-.wizard-bar .ball:focus {
-  outline: 0;
-}
 
 .ball-bar-container {
   width: 100%;
